@@ -68,69 +68,13 @@ RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sofia/Desktop/CAL/CAL-Quickstart
+CMAKE_SOURCE_DIR = /home/sofia/Desktop/CAL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sofia/Desktop/CAL/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -144,11 +88,67 @@ install/local/fast: preinstall/fast
 	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -173,22 +173,22 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TP1
+# Target rules for targets named TP4
 
 # Build rule for target.
-TP1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TP1
-.PHONY : TP1
+TP4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TP4
+.PHONY : TP4
 
 # fast build rule for target.
-TP1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/build
-.PHONY : TP1/fast
+TP4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/build
+.PHONY : TP4/fast
 
 #=============================================================================
 # Target rules for targets named TP2
@@ -217,17 +217,30 @@ TP3/fast:
 .PHONY : TP3/fast
 
 #=============================================================================
-# Target rules for targets named TP4
+# Target rules for targets named TP5
 
 # Build rule for target.
-TP4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TP4
-.PHONY : TP4
+TP5: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TP5
+.PHONY : TP5
 
 # fast build rule for target.
-TP4/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/build
-.PHONY : TP4/fast
+TP5/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/build
+.PHONY : TP5/fast
+
+#=============================================================================
+# Target rules for targets named TP1
+
+# Build rule for target.
+TP1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TP1
+.PHONY : TP1
+
+# fast build rule for target.
+TP1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/build
+.PHONY : TP1/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -794,16 +807,125 @@ TP4/ex6.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/TP4/ex6.cpp.s
 .PHONY : TP4/ex6.cpp.s
 
+TP5/Person.o: TP5/Person.cpp.o
+
+.PHONY : TP5/Person.o
+
+# target to build an object file
+TP5/Person.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/Person.cpp.o
+.PHONY : TP5/Person.cpp.o
+
+TP5/Person.i: TP5/Person.cpp.i
+
+.PHONY : TP5/Person.i
+
+# target to preprocess a source file
+TP5/Person.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/Person.cpp.i
+.PHONY : TP5/Person.cpp.i
+
+TP5/Person.s: TP5/Person.cpp.s
+
+.PHONY : TP5/Person.s
+
+# target to generate assembly for a file
+TP5/Person.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/Person.cpp.s
+.PHONY : TP5/Person.cpp.s
+
+TP5/ex1.o: TP5/ex1.cpp.o
+
+.PHONY : TP5/ex1.o
+
+# target to build an object file
+TP5/ex1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/ex1.cpp.o
+.PHONY : TP5/ex1.cpp.o
+
+TP5/ex1.i: TP5/ex1.cpp.i
+
+.PHONY : TP5/ex1.i
+
+# target to preprocess a source file
+TP5/ex1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/ex1.cpp.i
+.PHONY : TP5/ex1.cpp.i
+
+TP5/ex1.s: TP5/ex1.cpp.s
+
+.PHONY : TP5/ex1.s
+
+# target to generate assembly for a file
+TP5/ex1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/ex1.cpp.s
+.PHONY : TP5/ex1.cpp.s
+
+TP5/ex2.o: TP5/ex2.cpp.o
+
+.PHONY : TP5/ex2.o
+
+# target to build an object file
+TP5/ex2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/ex2.cpp.o
+.PHONY : TP5/ex2.cpp.o
+
+TP5/ex2.i: TP5/ex2.cpp.i
+
+.PHONY : TP5/ex2.i
+
+# target to preprocess a source file
+TP5/ex2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/ex2.cpp.i
+.PHONY : TP5/ex2.cpp.i
+
+TP5/ex2.s: TP5/ex2.cpp.s
+
+.PHONY : TP5/ex2.s
+
+# target to generate assembly for a file
+TP5/ex2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/ex2.cpp.s
+.PHONY : TP5/ex2.cpp.s
+
+TP5/ex3.o: TP5/ex3.cpp.o
+
+.PHONY : TP5/ex3.o
+
+# target to build an object file
+TP5/ex3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/ex3.cpp.o
+.PHONY : TP5/ex3.cpp.o
+
+TP5/ex3.i: TP5/ex3.cpp.i
+
+.PHONY : TP5/ex3.i
+
+# target to preprocess a source file
+TP5/ex3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/ex3.cpp.i
+.PHONY : TP5/ex3.cpp.i
+
+TP5/ex3.s: TP5/ex3.cpp.s
+
+.PHONY : TP5/ex3.s
+
+# target to generate assembly for a file
+TP5/ex3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/TP5/ex3.cpp.s
+.PHONY : TP5/ex3.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP2.dir/build.make CMakeFiles/TP2.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP3.dir/build.make CMakeFiles/TP3.dir/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -812,10 +934,11 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP2.dir/build.make CMakeFiles/TP2.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP3.dir/build.make CMakeFiles/TP3.dir/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -824,10 +947,11 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP2.dir/build.make CMakeFiles/TP2.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP3.dir/build.make CMakeFiles/TP3.dir/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP5.dir/build.make CMakeFiles/TP5.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -846,6 +970,7 @@ help:
 	@echo "... TP2"
 	@echo "... TP3"
 	@echo "... TP4"
+	@echo "... TP5"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -907,6 +1032,18 @@ help:
 	@echo "... TP4/ex6.o"
 	@echo "... TP4/ex6.i"
 	@echo "... TP4/ex6.s"
+	@echo "... TP5/Person.o"
+	@echo "... TP5/Person.i"
+	@echo "... TP5/Person.s"
+	@echo "... TP5/ex1.o"
+	@echo "... TP5/ex1.i"
+	@echo "... TP5/ex1.s"
+	@echo "... TP5/ex2.o"
+	@echo "... TP5/ex2.i"
+	@echo "... TP5/ex2.s"
+	@echo "... TP5/ex3.o"
+	@echo "... TP5/ex3.i"
+	@echo "... TP5/ex3.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -921,7 +1058,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

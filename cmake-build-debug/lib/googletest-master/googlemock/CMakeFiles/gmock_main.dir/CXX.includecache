@@ -526,13 +526,13 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/sofia/Desktop/CAL/CAL-Quickstart/lib/googletest-master/googlemock/src/gmock_main.cc
+/home/sofia/Desktop/CAL/lib/googletest-master/googlemock/src/gmock_main.cc
 iostream
 -
 gmock/gmock.h
-/home/sofia/Desktop/CAL/CAL-Quickstart/lib/googletest-master/googlemock/src/gmock/gmock.h
+/home/sofia/Desktop/CAL/lib/googletest-master/googlemock/src/gmock/gmock.h
 gtest/gtest.h
-/home/sofia/Desktop/CAL/CAL-Quickstart/lib/googletest-master/googlemock/src/gtest/gtest.h
+/home/sofia/Desktop/CAL/lib/googletest-master/googlemock/src/gtest/gtest.h
 tchar.h
 -
 

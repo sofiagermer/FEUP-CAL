@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/sofia/Desktop/CAL/CAL-Quickstart/lib/googletest-master/googletest/include -isystem /home/sofia/Desktop/CAL/CAL-Quickstart/lib/googletest-master/googletest -isystem /home/sofia/Desktop/CAL/CAL-Quickstart/lib/googletest-master/googlemock/include -isystem /home/sofia/Desktop/CAL/CAL-Quickstart/lib/googletest-master/googlemock 
+CXX_INCLUDES = -isystem /home/sofia/Desktop/CAL/lib/googletest-master/googletest/include -isystem /home/sofia/Desktop/CAL/lib/googletest-master/googletest -isystem /home/sofia/Desktop/CAL/lib/googletest-master/googlemock/include -isystem /home/sofia/Desktop/CAL/lib/googletest-master/googlemock 
 

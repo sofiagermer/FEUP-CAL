@@ -63,10 +63,10 @@ RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sofia/Desktop/CAL/CAL-Quickstart
+CMAKE_SOURCE_DIR = /home/sofia/Desktop/CAL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sofia/Desktop/CAL/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TP2.dir/depend.make
@@ -79,68 +79,68 @@ include CMakeFiles/TP2.dir/flags.make
 
 CMakeFiles/TP2.dir/main.cpp.o: CMakeFiles/TP2.dir/flags.make
 CMakeFiles/TP2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP2.dir/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2.dir/main.cpp.o -c /home/sofia/Desktop/CAL/CAL-Quickstart/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP2.dir/main.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2.dir/main.cpp.o -c /home/sofia/Desktop/CAL/main.cpp
 
 CMakeFiles/TP2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP2.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sofia/Desktop/CAL/CAL-Quickstart/main.cpp > CMakeFiles/TP2.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sofia/Desktop/CAL/main.cpp > CMakeFiles/TP2.dir/main.cpp.i
 
 CMakeFiles/TP2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP2.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sofia/Desktop/CAL/CAL-Quickstart/main.cpp -o CMakeFiles/TP2.dir/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sofia/Desktop/CAL/main.cpp -o CMakeFiles/TP2.dir/main.cpp.s
 
 CMakeFiles/TP2.dir/TP2/ex1.cpp.o: CMakeFiles/TP2.dir/flags.make
 CMakeFiles/TP2.dir/TP2/ex1.cpp.o: ../TP2/ex1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TP2.dir/TP2/ex1.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2.dir/TP2/ex1.cpp.o -c /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TP2.dir/TP2/ex1.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2.dir/TP2/ex1.cpp.o -c /home/sofia/Desktop/CAL/TP2/ex1.cpp
 
 CMakeFiles/TP2.dir/TP2/ex1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP2.dir/TP2/ex1.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex1.cpp > CMakeFiles/TP2.dir/TP2/ex1.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sofia/Desktop/CAL/TP2/ex1.cpp > CMakeFiles/TP2.dir/TP2/ex1.cpp.i
 
 CMakeFiles/TP2.dir/TP2/ex1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP2.dir/TP2/ex1.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex1.cpp -o CMakeFiles/TP2.dir/TP2/ex1.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sofia/Desktop/CAL/TP2/ex1.cpp -o CMakeFiles/TP2.dir/TP2/ex1.cpp.s
 
 CMakeFiles/TP2.dir/TP2/ex2.cpp.o: CMakeFiles/TP2.dir/flags.make
 CMakeFiles/TP2.dir/TP2/ex2.cpp.o: ../TP2/ex2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TP2.dir/TP2/ex2.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2.dir/TP2/ex2.cpp.o -c /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TP2.dir/TP2/ex2.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2.dir/TP2/ex2.cpp.o -c /home/sofia/Desktop/CAL/TP2/ex2.cpp
 
 CMakeFiles/TP2.dir/TP2/ex2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP2.dir/TP2/ex2.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex2.cpp > CMakeFiles/TP2.dir/TP2/ex2.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sofia/Desktop/CAL/TP2/ex2.cpp > CMakeFiles/TP2.dir/TP2/ex2.cpp.i
 
 CMakeFiles/TP2.dir/TP2/ex2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP2.dir/TP2/ex2.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex2.cpp -o CMakeFiles/TP2.dir/TP2/ex2.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sofia/Desktop/CAL/TP2/ex2.cpp -o CMakeFiles/TP2.dir/TP2/ex2.cpp.s
 
 CMakeFiles/TP2.dir/TP2/ex3.cpp.o: CMakeFiles/TP2.dir/flags.make
 CMakeFiles/TP2.dir/TP2/ex3.cpp.o: ../TP2/ex3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TP2.dir/TP2/ex3.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2.dir/TP2/ex3.cpp.o -c /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TP2.dir/TP2/ex3.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2.dir/TP2/ex3.cpp.o -c /home/sofia/Desktop/CAL/TP2/ex3.cpp
 
 CMakeFiles/TP2.dir/TP2/ex3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP2.dir/TP2/ex3.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex3.cpp > CMakeFiles/TP2.dir/TP2/ex3.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sofia/Desktop/CAL/TP2/ex3.cpp > CMakeFiles/TP2.dir/TP2/ex3.cpp.i
 
 CMakeFiles/TP2.dir/TP2/ex3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP2.dir/TP2/ex3.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex3.cpp -o CMakeFiles/TP2.dir/TP2/ex3.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sofia/Desktop/CAL/TP2/ex3.cpp -o CMakeFiles/TP2.dir/TP2/ex3.cpp.s
 
 CMakeFiles/TP2.dir/TP2/ex4.cpp.o: CMakeFiles/TP2.dir/flags.make
 CMakeFiles/TP2.dir/TP2/ex4.cpp.o: ../TP2/ex4.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TP2.dir/TP2/ex4.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2.dir/TP2/ex4.cpp.o -c /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex4.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TP2.dir/TP2/ex4.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2.dir/TP2/ex4.cpp.o -c /home/sofia/Desktop/CAL/TP2/ex4.cpp
 
 CMakeFiles/TP2.dir/TP2/ex4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP2.dir/TP2/ex4.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex4.cpp > CMakeFiles/TP2.dir/TP2/ex4.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sofia/Desktop/CAL/TP2/ex4.cpp > CMakeFiles/TP2.dir/TP2/ex4.cpp.i
 
 CMakeFiles/TP2.dir/TP2/ex4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP2.dir/TP2/ex4.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sofia/Desktop/CAL/CAL-Quickstart/TP2/ex4.cpp -o CMakeFiles/TP2.dir/TP2/ex4.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sofia/Desktop/CAL/TP2/ex4.cpp -o CMakeFiles/TP2.dir/TP2/ex4.cpp.s
 
 # Object files for target TP2
 TP2_OBJECTS = \
@@ -164,7 +164,7 @@ TP2: lib/libgmock_maind.a
 TP2: lib/libgmockd.a
 TP2: lib/libgtestd.a
 TP2: CMakeFiles/TP2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable TP2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable TP2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TP2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -177,6 +177,6 @@ CMakeFiles/TP2.dir/clean:
 .PHONY : CMakeFiles/TP2.dir/clean
 
 CMakeFiles/TP2.dir/depend:
-	cd /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sofia/Desktop/CAL/CAL-Quickstart /home/sofia/Desktop/CAL/CAL-Quickstart /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug /home/sofia/Desktop/CAL/CAL-Quickstart/cmake-build-debug/CMakeFiles/TP2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sofia/Desktop/CAL/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sofia/Desktop/CAL /home/sofia/Desktop/CAL /home/sofia/Desktop/CAL/cmake-build-debug /home/sofia/Desktop/CAL/cmake-build-debug /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/TP2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/TP2.dir/depend
 
