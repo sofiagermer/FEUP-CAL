@@ -69,3 +69,17 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
   file(TOUCH_NOCREATE "/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/cmake.verify_globs")
 endif()
+
+# TP6_FILES at CMakeLists.txt:24 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/sofia/Desktop/CAL/TP6/*.cpp")
+set(OLD_GLOB
+  "/home/sofia/Desktop/CAL/TP6/TestAux.cpp"
+  "/home/sofia/Desktop/CAL/TP6/ex1.cpp"
+  "/home/sofia/Desktop/CAL/TP6/ex2.cpp"
+  "/home/sofia/Desktop/CAL/TP6/ex3.cpp"
+  "/home/sofia/Desktop/CAL/TP6/ex4.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/cmake.verify_globs")
+endif()

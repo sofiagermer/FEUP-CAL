@@ -17,58 +17,6 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TP4">
-				<Option output="/home/sofia/Desktop/CAL/cmake-build-debug/TP4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/sofia/Desktop/CAL/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest"/>
-					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock/include"/>
-					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP4"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="TP4/fast">
-				<Option output="/home/sofia/Desktop/CAL/cmake-build-debug/TP4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/sofia/Desktop/CAL/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest"/>
-					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock/include"/>
-					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP4/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="install/local">
 				<Option working_dir="/home/sofia/Desktop/CAL/cmake-build-debug"/>
 				<Option type="4"/>
@@ -292,6 +240,110 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP1/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP4">
+				<Option output="/home/sofia/Desktop/CAL/cmake-build-debug/TP4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sofia/Desktop/CAL/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP4"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP4/fast">
+				<Option output="/home/sofia/Desktop/CAL/cmake-build-debug/TP4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sofia/Desktop/CAL/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP4/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP6">
+				<Option output="/home/sofia/Desktop/CAL/cmake-build-debug/TP6" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sofia/Desktop/CAL/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP6"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TP6/fast">
+				<Option output="/home/sofia/Desktop/CAL/cmake-build-debug/TP6" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sofia/Desktop/CAL/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googletest"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP6/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/sofia/Desktop/CAL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -610,6 +662,24 @@
 		<Unit filename="/home/sofia/Desktop/CAL/TP5/ex3.cpp">
 			<Option target="TP5"/>
 		</Unit>
+		<Unit filename="/home/sofia/Desktop/CAL/TP6/TestAux.cpp">
+			<Option target="TP6"/>
+		</Unit>
+		<Unit filename="/home/sofia/Desktop/CAL/TP6/TestAux.h">
+			<Option target="TP6"/>
+		</Unit>
+		<Unit filename="/home/sofia/Desktop/CAL/TP6/ex1.cpp">
+			<Option target="TP6"/>
+		</Unit>
+		<Unit filename="/home/sofia/Desktop/CAL/TP6/ex2.cpp">
+			<Option target="TP6"/>
+		</Unit>
+		<Unit filename="/home/sofia/Desktop/CAL/TP6/ex3.cpp">
+			<Option target="TP6"/>
+		</Unit>
+		<Unit filename="/home/sofia/Desktop/CAL/TP6/ex4.cpp">
+			<Option target="TP6"/>
+		</Unit>
 		<Unit filename="/home/sofia/Desktop/CAL/lib/googletest-master/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
@@ -623,11 +693,12 @@
 			<Option target="gtest_main"/>
 		</Unit>
 		<Unit filename="/home/sofia/Desktop/CAL/main.cpp">
-			<Option target="TP4"/>
 			<Option target="TP2"/>
 			<Option target="TP3"/>
 			<Option target="TP5"/>
 			<Option target="TP1"/>
+			<Option target="TP4"/>
+			<Option target="TP6"/>
 		</Unit>
 		<Unit filename="/home/sofia/Desktop/CAL/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

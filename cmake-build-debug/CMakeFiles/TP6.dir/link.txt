@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/TP6.dir/main.cpp.o CMakeFiles/TP6.dir/TP6/TestAux.cpp.o CMakeFiles/TP6.dir/TP6/ex1.cpp.o CMakeFiles/TP6.dir/TP6/ex2.cpp.o CMakeFiles/TP6.dir/TP6/ex3.cpp.o CMakeFiles/TP6.dir/TP6/ex4.cpp.o  -o TP6  lib/libgtest_maind.a lib/libgmock_maind.a lib/libgmockd.a lib/libgtestd.a -lpthread 

@@ -1,10 +1,11 @@
-/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/TP4.dir
 /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/install/local.dir
 /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/TP2.dir
 /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/TP3.dir
 /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/TP5.dir
 /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/TP1.dir
+/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/TP4.dir
+/home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/TP6.dir
 /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/install/strip.dir
 /home/sofia/Desktop/CAL/cmake-build-debug/CMakeFiles/list_install_components.dir

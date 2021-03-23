@@ -9,8 +9,10 @@
 #include <list>
 #include <limits>
 #include <cmath>
+#include <iostream>
 #include "MutablePriorityQueue.h"
-
+#include "stdio.h"
+using namespace std;
 
 template <class T> class Edge;
 template <class T> class Graph;
@@ -172,7 +174,27 @@ bool Graph<T>::addEdge(const T &sourc, const T &dest, double w) {
 
 template<class T>
 void Graph<T>::unweightedShortestPath(const T &orig) {
-    // TODO implement this
+    // TODO (7 lines)
+    for(auto &vertex : vertexSet) {
+        vertex->visited = false;
+        vertex->path = NULL;
+    }
+    Vertex<T>*vertex = findVertex(orig);
+    queue<Vertex<T>*> queue1;
+    vertex->visited = true;
+    queue1.push(vertex);
+    while(!queue1.empty()){
+        vertex = queue1.front();
+        queue1.pop();
+        for(auto edge : vertex->adj){
+            if(!edge.dest->visited){
+                edge.dest->dist = vertex->dist + 1;
+                edge.dest->visited = true;
+                edge.dest->path = vertex;
+                queue1.push(edge.dest);
+            }
+        }
+    }
 }
 
 
@@ -190,8 +212,30 @@ void Graph<T>::bellmanFordShortestPath(const T &orig) {
 
 template<class T>
 std::vector<T> Graph<T>::getPath(const T &origin, const T &dest) const{
-    std::vector<T> res;
-    // TODO implement this
+    /*std::vector<T> res;
+    auto destV=findVertex(dest);
+    Vertex<T>* current = destV->path;
+    res.push_back(dest);
+    while(current->info != origin){
+        current = current ->path;
+        res.push_back(current->info);
+    }
+    res.push_back(current->info);
+    return res;*/
+
+    vector<T> res,aux;
+    auto destV=findVertex(dest);
+    aux.push_back(destV->info);
+    auto thisPath=destV->path;
+    aux.push_back(thisPath->info);
+    while(thisPath!=NULL){
+        thisPath=thisPath->path;
+        if(thisPath!=NULL)
+            aux.push_back(thisPath->info);
+    }
+    for(int i=aux.size()-1;i>=0;i--){
+        res.push_back(aux[i]);
+    }
     return res;
 }
 
