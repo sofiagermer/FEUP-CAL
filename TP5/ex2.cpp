@@ -17,7 +17,7 @@ TEST(TP5_Ex2a, test_dfs) {
         else
             EXPECT_EQ(names[i], "(null)");
 }
-/*
+
 TEST(TP5_Ex2b, test_bfs) {
     Graph<Person> net1;
     createNetwork(net1);
@@ -29,7 +29,7 @@ TEST(TP5_Ex2b, test_bfs) {
         else
             EXPECT_EQ(names[i], "(null)");
 }
-
+/*
 TEST(TP5_Ex2c, test_topsort) {
     Graph<int> myGraph;
     myGraph.addVertex(1); myGraph.addVertex(2); myGraph.addVertex(3); myGraph.addVertex(4);

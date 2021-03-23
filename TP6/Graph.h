@@ -12,6 +12,7 @@
 #include <iostream>
 #include "MutablePriorityQueue.h"
 #include "stdio.h"
+#include <bits/stdc++.h>
 using namespace std;
 
 template <class T> class Edge;
@@ -212,30 +213,17 @@ void Graph<T>::bellmanFordShortestPath(const T &orig) {
 
 template<class T>
 std::vector<T> Graph<T>::getPath(const T &origin, const T &dest) const{
-    /*std::vector<T> res;
+    std::vector<T> res;
     auto destV=findVertex(dest);
     Vertex<T>* current = destV->path;
     res.push_back(dest);
+
     while(current->info != origin){
-        current = current ->path;
         res.push_back(current->info);
+        current = current ->path;
     }
     res.push_back(current->info);
-    return res;*/
-
-    vector<T> res,aux;
-    auto destV=findVertex(dest);
-    aux.push_back(destV->info);
-    auto thisPath=destV->path;
-    aux.push_back(thisPath->info);
-    while(thisPath!=NULL){
-        thisPath=thisPath->path;
-        if(thisPath!=NULL)
-            aux.push_back(thisPath->info);
-    }
-    for(int i=aux.size()-1;i>=0;i--){
-        res.push_back(aux[i]);
-    }
+    reverse(res.begin(),res.end());
     return res;
 }
 

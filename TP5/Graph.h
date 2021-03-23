@@ -242,7 +242,32 @@ std::vector<T> Graph<T>::bfs(const T & source) const {
     // TODO (22 lines)
     // HINT: Use the flag "visited" to mark newly discovered vertices .
     // HINT: Use the "queue<>" class to temporarily store the vertices.
-    std::vector<T> res;
+    vector<T> res;
+    for(auto &vertex : vertexSet) {
+        vertex->visited = false;
+    }
+    Vertex<T>*vertex = findVertex(source);
+    queue<Vertex<T>*> queue1;
+    vertex->visited = true;
+    res.push_back(vertex->info);
+    //Por na queue nos filhos diretos do primeiro nó a analisar
+    for(auto edge : vertex -> adj){
+        edge.dest->visited = true;
+        res.push_back(edge.dest->info);
+        cout << edge.dest->info << endl;
+        queue1.push(edge.dest);
+    }
+    while(!queue1.empty()){
+        vertex = queue1.front();
+        queue1.pop();
+        for(auto edge : vertex -> adj){
+            if(!edge.dest->visited){
+                edge.dest->visited = true;
+                res.push_back(edge.dest->info);
+                queue1.push(edge.dest);
+            }
+        }
+    }
     return res;
 }
 
