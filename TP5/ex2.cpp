@@ -5,7 +5,7 @@
 
 /// TESTS ///
 #include <gtest/gtest.h>
-/*
+
 TEST(TP5_Ex2a, test_dfs) {
     Graph<Person> net1;
     createNetwork(net1);
@@ -17,7 +17,7 @@ TEST(TP5_Ex2a, test_dfs) {
         else
             EXPECT_EQ(names[i], "(null)");
 }
-
+/*
 TEST(TP5_Ex2b, test_bfs) {
     Graph<Person> net1;
     createNetwork(net1);

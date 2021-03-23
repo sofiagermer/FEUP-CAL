@@ -6,7 +6,9 @@
 
 #include <vector>
 #include <queue>
+#include <iostream>
 
+using namespace std;
 template <class T> class Edge;
 template <class T> class Graph;
 template <class T> class Vertex;
@@ -173,16 +175,15 @@ bool Vertex<T>::removeEdgeTo(Vertex<T> *d) {
 template <class T>
 bool Graph<T>::removeVertex(const T &in) {
     // TODO (10 lines)
-    if(findVertex(in) == NULL) return false;
+    auto vertex = findVertex(in);
+    if(vertex == NULL) return false;
     for(int i = 0; i < vertexSet.size(); i++){
-        if(vertexSet.at(i) == in) {
-            vertexSet.at(i).removeEdge(vertexSet.at(i));
+        if(vertexSet.at(i) == vertex) {
+            vertexSet.at(i)->removeEdgeTo(vertexSet.at(i));
             vertexSet.erase(vertexSet.begin() +i);
         }
     }
-    // HINT: use an iterator to scan the "vertexSet" vector and then erase the vertex.
-    // HINT: take advantage of "removeEdgeTo" to remove incoming edges.
-    return false;
+    return true;
 }
 
 
@@ -197,6 +198,17 @@ template <class T>
 std::vector<T> Graph<T>::dfs() const {
     // TODO (7 lines)
     std::vector<T> res;
+    for(auto &vertex : vertexSet) {
+        vertex->visited = false;
+    }
+    for(auto &vertex : vertexSet){
+        if(!vertex->visited){
+            vertex->visited = true;
+            cout << vertex->info << endl;
+            res.push_back(vertex->info);
+            dfsVisit(vertex, res);
+        }
+    }
     return res;
 }
 
@@ -207,6 +219,14 @@ std::vector<T> Graph<T>::dfs() const {
 template <class T>
 void Graph<T>::dfsVisit(Vertex<T> *v, std::vector<T> & res) const {
     // TODO (7 lines)
+    for(auto edge : v->adj) {
+        if (!edge.dest->visited) {
+            edge.dest->visited = true;
+            cout << edge.dest->info << endl;
+            res.push_back(edge.dest->info);
+            dfsVisit(edge.dest,res);
+        }
+    }
 }
 
 /****************** 2b) bfs ********************/
