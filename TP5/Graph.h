@@ -7,6 +7,7 @@
 #include <vector>
 #include <queue>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 template <class T> class Edge;
@@ -204,7 +205,6 @@ std::vector<T> Graph<T>::dfs() const {
     for(auto &vertex : vertexSet){
         if(!vertex->visited){
             vertex->visited = true;
-            cout << vertex->info << endl;
             res.push_back(vertex->info);
             dfsVisit(vertex, res);
         }
@@ -222,7 +222,6 @@ void Graph<T>::dfsVisit(Vertex<T> *v, std::vector<T> & res) const {
     for(auto edge : v->adj) {
         if (!edge.dest->visited) {
             edge.dest->visited = true;
-            cout << edge.dest->info << endl;
             res.push_back(edge.dest->info);
             dfsVisit(edge.dest,res);
         }
@@ -254,7 +253,6 @@ std::vector<T> Graph<T>::bfs(const T & source) const {
     for(auto edge : vertex -> adj){
         edge.dest->visited = true;
         res.push_back(edge.dest->info);
-        cout << edge.dest->info << endl;
         queue1.push(edge.dest);
     }
     while(!queue1.empty()){
@@ -283,7 +281,37 @@ std::vector<T> Graph<T>::bfs(const T & source) const {
 template<class T>
 std::vector<T> Graph<T>::topsort() const {
     // TODO (26 lines)
-    std::vector<T> res;
+    vector<T> res;
+    int numVertex = 0;
+    bool possible = true;
+    for(auto &vertex : vertexSet) {
+        vertex->visited = false;
+        numVertex++;
+    }
+    for(int i = 0; i < vertexSet.size();i++) {
+        possible = true;
+        if (!vertexSet.at(i)->visited) {
+            for (int j = 0; j < vertexSet.size(); j++) {
+                if (!vertexSet.at(j)->visited) {  //aqui estou a ver se o vértice de origem está visitado; se estiver o edge não interessa
+                    for (auto edge : vertexSet.at(j)->adj) {
+                        if (!edge.dest->visited) {
+                            if (edge.dest->info == vertexSet.at(i)->info) {
+                                possible = false;
+                            }
+                        }
+                    }
+                }
+            }
+            if(possible) {
+                res.push_back(vertexSet.at(i)->info);
+                vertexSet.at(i)->visited = true;
+                numVertex--;
+                i = 0;
+            }
+        }
+    }
+    if(numVertex == 0)return res;
+    res.clear();
     return res;
 }
 

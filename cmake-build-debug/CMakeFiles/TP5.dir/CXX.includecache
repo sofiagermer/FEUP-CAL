@@ -337,6 +337,12 @@ queue
 -
 iostream
 -
+algorithm
+-
+
+/home/sofia/Desktop/CAL/TP5/Person.cpp
+Person.h
+/home/sofia/Desktop/CAL/TP5/Person.h
 
 /home/sofia/Desktop/CAL/TP5/Person.h
 string
@@ -346,7 +352,23 @@ ostream
 Graph.h
 /home/sofia/Desktop/CAL/TP5/Graph.h
 
+/home/sofia/Desktop/CAL/TP5/ex1.cpp
+Graph.h
+/home/sofia/Desktop/CAL/TP5/Graph.h
+Person.h
+/home/sofia/Desktop/CAL/TP5/Person.h
+gtest/gtest.h
+-
+
 /home/sofia/Desktop/CAL/TP5/ex2.cpp
+Graph.h
+/home/sofia/Desktop/CAL/TP5/Graph.h
+Person.h
+/home/sofia/Desktop/CAL/TP5/Person.h
+gtest/gtest.h
+-
+
+/home/sofia/Desktop/CAL/TP5/ex3.cpp
 Graph.h
 /home/sofia/Desktop/CAL/TP5/Graph.h
 Person.h
