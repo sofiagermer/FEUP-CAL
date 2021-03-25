@@ -5,7 +5,7 @@
 
 /// TESTS ///
 #include <gtest/gtest.h>
-/*
+
 TEST(TP5_Ex3a, test_maxNewChildren) {
     Graph<Person> net1;
     Person p1("Ana",19);
@@ -57,4 +57,4 @@ TEST(TP5_Ex3b, test_isDAG) {
     myGraph.addEdge(1, 4, 0);
 
     EXPECT_EQ(true, myGraph.isDAG());
-}*/
+}

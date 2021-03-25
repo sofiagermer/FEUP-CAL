@@ -327,9 +327,44 @@ std::vector<T> Graph<T>::topsort() const {
 
 template <class T>
 int Graph<T>::maxNewChildren(const T & source, T &inf) const {
-    // TODO (28 lines, mostly reused)
-    return 0;
+    vector<T> res;
+    for(auto &vertex : vertexSet) {
+        vertex->visited = false;
+    }
+    int numNews = 0;
+    int tempnumNews = 0;
+    Vertex<T>*vertex = findVertex(source);
+    queue<Vertex<T>*> queue1;
+    vertex->visited = true;
+    res.push_back(vertex->info);
+    //Por na queue nos filhos diretos do primeiro nó a analisar
+    for(auto edge : vertex -> adj){
+        edge.dest->visited = true;
+        res.push_back(edge.dest->info);
+        queue1.push(edge.dest);
+        numNews++;
+    }
+    inf = vertex->info;
+    while(!queue1.empty()){
+        vertex = queue1.front();
+        queue1.pop();
+        tempnumNews = 0;
+        for(auto edge : vertex -> adj){
+            if(!edge.dest->visited){
+                tempnumNews++;
+                edge.dest->visited = true;
+                res.push_back(edge.dest->info);
+                queue1.push(edge.dest);
+            }
+        }
+        if(tempnumNews > numNews){
+            numNews = tempnumNews;
+            inf = vertex->info;
+        }
+    }
+    return numNews;
 }
+
 
 /****************** 3b) isDAG   (HOME WORK)  ********************/
 
@@ -345,7 +380,20 @@ template <class T>
 bool Graph<T>::isDAG() const {
     // TODO (9 lines, mostly reused)
     // HINT: use the auxiliary field "processing" to mark the vertices in the stack.
-    return true;
+    std::vector<T> res;
+    for(auto &vertex : vertexSet) {
+        vertex->visited = false;
+    }
+    for(auto &vertex : vertexSet){
+        if(!vertex->visited){
+            vertex->processing = true;
+            res.push_back(vertex->info);
+            if(dfsIsDAG(vertex)) return true;
+            vertex->visited = true;
+            vertex->processing = false;
+        }
+    }
+    return false;
 }
 
 /**
@@ -355,7 +403,15 @@ bool Graph<T>::isDAG() const {
 template <class T>
 bool Graph<T>::dfsIsDAG(Vertex<T> *v) const {
     // TODO (12 lines, mostly reused)
-    return true;
+    for(auto edge : v->adj) {
+        if(edge.dest->processing) return true;
+        if (!edge.dest->visited) {
+            edge.dest->processing = true;
+            edge.dest->visited = true;
+            dfsIsDAG(edge.dest);
+        }
+    }
+    return false;
 }
 
 #endif /* GRAPH_H_ */
