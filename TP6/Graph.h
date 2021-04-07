@@ -219,7 +219,6 @@ void Graph<T>::dijkstraShortestPath(const T &origin) {
         vertex = mutablePriorityQueue.extractMin();
         for(auto edge : vertex->adj){
             if(edge.dest->dist > vertex->dist + edge.weight){
-                auto oldDist = edge.dest->dist;
                 edge.dest->dist = vertex->dist + edge.weight;
                 edge.dest->path = vertex;
                 if(!edge.dest->visited){
@@ -236,7 +235,7 @@ void Graph<T>::dijkstraShortestPath(const T &origin) {
 }
 
 template<class T>
-/*
+
 void Graph<T>::bellmanFordShortestPath(const T &orig) {
     Vertex<T> *vertex = findVertex(orig);
     if(vertex == NULL) return;
@@ -246,10 +245,24 @@ void Graph<T>::bellmanFordShortestPath(const T &orig) {
     }
     vertex->dist = 0;
     for(int i = 0; i < vertexSet.size() - 1; i++){
-        for()
+        for(auto &vertex : vertexSet){
+            for(auto &edge : vertex->adj){
+                if(edge.dest->dist > vertex->dist + edge.weight){
+                    edge.dest->dist = vertex->dist + edge.weight;
+                    edge.dest->path = vertex;
+                }
+            }
+        }
+    }
+    for(auto &vertex : vertexSet){
+        for(auto &edge : vertex->adj){
+            if(vertex->dist + edge.weight < edge.dest->dist){
+                return;
+            }
+        }
     }
 
-}*/
+}
 
 
 template<class T>
