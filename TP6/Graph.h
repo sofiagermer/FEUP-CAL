@@ -9,10 +9,11 @@
 #include <list>
 #include <limits>
 #include <cmath>
-#include <iostream>
+#include <set>
+#include <algorithm>
+#include <stdexcept>
+#include <climits>
 #include "MutablePriorityQueue.h"
-#include "stdio.h"
-#include <bits/stdc++.h>
 using namespace std;
 
 template <class T> class Edge;
@@ -102,7 +103,8 @@ Edge<T>::Edge(Vertex<T> *d, double w): dest(d), weight(w) {}
 template <class T>
 class Graph {
     std::vector<Vertex<T> *> vertexSet;    // vertex set
-
+    std::vector<std::vector<size_t>> nextFloydWarshall;
+    std::vector<std::vector<size_t>> matrixFloydWarshall;
 public:
     Vertex<T> *findVertex(const T &in) const;
     bool addVertex(const T &in);
@@ -201,29 +203,65 @@ void Graph<T>::unweightedShortestPath(const T &orig) {
 
 template<class T>
 void Graph<T>::dijkstraShortestPath(const T &origin) {
-    // TODO implement this
-}
+    Vertex<T>*vertex = findVertex(origin);
+    if(vertex == NULL) return;
 
+    MutablePriorityQueue<Vertex<T>> mutablePriorityQueue;
+    for(auto &vertex : vertexSet){
+        vertex->dist = INT_MAX;
+        vertex->path = NULL;
+        vertex->visited = false;
+    }
+    vertex->dist = 0;
+    vertex->visited = true;
+    mutablePriorityQueue.insert(vertex);
+    while(!mutablePriorityQueue.empty()){
+        vertex = mutablePriorityQueue.extractMin();
+        for(auto edge : vertex->adj){
+            if(edge.dest->dist > vertex->dist + edge.weight){
+                auto oldDist = edge.dest->dist;
+                edge.dest->dist = vertex->dist + edge.weight;
+                edge.dest->path = vertex;
+                if(!edge.dest->visited){
+                    edge.dest->visited = true;
+                    mutablePriorityQueue.insert(edge.dest);
+                }
+                else{
+                    mutablePriorityQueue.decreaseKey(edge.dest);
+                }
+            }
+
+        }
+    }
+}
 
 template<class T>
+/*
 void Graph<T>::bellmanFordShortestPath(const T &orig) {
-    // TODO implement this
-}
+    Vertex<T> *vertex = findVertex(orig);
+    if(vertex == NULL) return;
+    for(auto &v : vertexSet){
+        v->dist = INF;
+        v->path = NULL;
+    }
+    vertex->dist = 0;
+    for(int i = 0; i < vertexSet.size() - 1; i++){
+        for()
+    }
+
+}*/
 
 
 template<class T>
 std::vector<T> Graph<T>::getPath(const T &origin, const T &dest) const{
     std::vector<T> res;
-    auto destV=findVertex(dest);
-    Vertex<T>* current = destV->path;
-    res.push_back(dest);
-
+    auto current = findVertex(dest);
     while(current->info != origin){
         res.push_back(current->info);
-        current = current ->path;
+        current = current->path;
     }
     res.push_back(current->info);
-    reverse(res.begin(),res.end());
+    std::reverse(res.begin(),res.end());
     return res;
 }
 
@@ -233,15 +271,15 @@ std::vector<T> Graph<T>::getPath(const T &origin, const T &dest) const{
 
 template<class T>
 void Graph<T>::floydWarshallShortestPath() {
-    // TODO implement this
 }
+
 
 template<class T>
 std::vector<T> Graph<T>::getfloydWarshallPath(const T &orig, const T &dest) const{
     std::vector<T> res;
-    // TODO implement this
     return res;
 }
+
 
 
 #endif /* GRAPH_H_ */

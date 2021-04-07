@@ -88,6 +88,18 @@ install/local/fast: preinstall/fast
 	/snap/clion/145/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/145/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/145/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -131,18 +143,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/145/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/145/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -254,6 +254,19 @@ TP6: cmake_check_build_system
 TP6/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP6.dir/build.make CMakeFiles/TP6.dir/build
 .PHONY : TP6/fast
+
+#=============================================================================
+# Target rules for targets named TP7
+
+# Build rule for target.
+TP7: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TP7
+.PHONY : TP7
+
+# fast build rule for target.
+TP7/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/build
+.PHONY : TP7/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -1063,6 +1076,87 @@ TP6/ex4.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP6.dir/build.make CMakeFiles/TP6.dir/TP6/ex4.cpp.s
 .PHONY : TP6/ex4.cpp.s
 
+TP7/TestAux.o: TP7/TestAux.cpp.o
+
+.PHONY : TP7/TestAux.o
+
+# target to build an object file
+TP7/TestAux.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/TP7/TestAux.cpp.o
+.PHONY : TP7/TestAux.cpp.o
+
+TP7/TestAux.i: TP7/TestAux.cpp.i
+
+.PHONY : TP7/TestAux.i
+
+# target to preprocess a source file
+TP7/TestAux.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/TP7/TestAux.cpp.i
+.PHONY : TP7/TestAux.cpp.i
+
+TP7/TestAux.s: TP7/TestAux.cpp.s
+
+.PHONY : TP7/TestAux.s
+
+# target to generate assembly for a file
+TP7/TestAux.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/TP7/TestAux.cpp.s
+.PHONY : TP7/TestAux.cpp.s
+
+TP7/ex1.o: TP7/ex1.cpp.o
+
+.PHONY : TP7/ex1.o
+
+# target to build an object file
+TP7/ex1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/TP7/ex1.cpp.o
+.PHONY : TP7/ex1.cpp.o
+
+TP7/ex1.i: TP7/ex1.cpp.i
+
+.PHONY : TP7/ex1.i
+
+# target to preprocess a source file
+TP7/ex1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/TP7/ex1.cpp.i
+.PHONY : TP7/ex1.cpp.i
+
+TP7/ex1.s: TP7/ex1.cpp.s
+
+.PHONY : TP7/ex1.s
+
+# target to generate assembly for a file
+TP7/ex1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/TP7/ex1.cpp.s
+.PHONY : TP7/ex1.cpp.s
+
+TP7/ex2.o: TP7/ex2.cpp.o
+
+.PHONY : TP7/ex2.o
+
+# target to build an object file
+TP7/ex2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/TP7/ex2.cpp.o
+.PHONY : TP7/ex2.cpp.o
+
+TP7/ex2.i: TP7/ex2.cpp.i
+
+.PHONY : TP7/ex2.i
+
+# target to preprocess a source file
+TP7/ex2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/TP7/ex2.cpp.i
+.PHONY : TP7/ex2.cpp.i
+
+TP7/ex2.s: TP7/ex2.cpp.s
+
+.PHONY : TP7/ex2.s
+
+# target to generate assembly for a file
+TP7/ex2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/TP7/ex2.cpp.s
+.PHONY : TP7/ex2.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -1075,6 +1169,7 @@ main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP6.dir/build.make CMakeFiles/TP6.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -1089,6 +1184,7 @@ main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP6.dir/build.make CMakeFiles/TP6.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -1103,6 +1199,7 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP4.dir/build.make CMakeFiles/TP4.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP6.dir/build.make CMakeFiles/TP6.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP7.dir/build.make CMakeFiles/TP7.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -1123,6 +1220,7 @@ help:
 	@echo "... TP4"
 	@echo "... TP5"
 	@echo "... TP6"
+	@echo "... TP7"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -1211,6 +1309,15 @@ help:
 	@echo "... TP6/ex4.o"
 	@echo "... TP6/ex4.i"
 	@echo "... TP6/ex4.s"
+	@echo "... TP7/TestAux.o"
+	@echo "... TP7/TestAux.i"
+	@echo "... TP7/TestAux.s"
+	@echo "... TP7/ex1.o"
+	@echo "... TP7/ex1.i"
+	@echo "... TP7/ex1.s"
+	@echo "... TP7/ex2.o"
+	@echo "... TP7/ex2.i"
+	@echo "... TP7/ex2.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

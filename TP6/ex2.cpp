@@ -4,12 +4,13 @@
 // Complete the functions on the Graph.h file
 
 /// TESTS ///
-/*
+
 TEST(TP6_Ex2, test_dijkstra) {
     Graph<int> myGraph = CreateTestGraph();
 
     myGraph.dijkstraShortestPath(3);
     checkAllPaths(myGraph, "1<-3|2<-1|3<-|4<-2|5<-4|6<-3|7<-5|");
+
 
     myGraph.dijkstraShortestPath(1);
     checkAllPaths(myGraph, "1<-|2<-1|3<-4|4<-2|5<-4|6<-4|7<-5|");
@@ -41,4 +42,4 @@ TEST(TP6_Ex2, test_performance_dijkstra) {
        auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(finish - start).count();
        std::cout << "Dijkstra processing grid " << n << " x " << n << " average time (micro-seconds)=" << (elapsed / (n*n)) << std::endl;
    }
-}*/
+}

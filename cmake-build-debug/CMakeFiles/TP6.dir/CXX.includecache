@@ -341,14 +341,16 @@ limits
 -
 cmath
 -
-iostream
+set
+-
+algorithm
+-
+stdexcept
+-
+climits
 -
 MutablePriorityQueue.h
 /home/sofia/Desktop/CAL/TP6/MutablePriorityQueue.h
-stdio.h
-/home/sofia/Desktop/CAL/TP6/stdio.h
-bits/stdc++.h
--
 
 /home/sofia/Desktop/CAL/TP6/MutablePriorityQueue.h
 vector
