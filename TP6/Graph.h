@@ -103,8 +103,8 @@ Edge<T>::Edge(Vertex<T> *d, double w): dest(d), weight(w) {}
 template <class T>
 class Graph {
     std::vector<Vertex<T> *> vertexSet;    // vertex set
-    std::vector<std::vector<size_t>> nextFloydWarshall;
-    std::vector<std::vector<size_t>> matrixFloydWarshall;
+    std::vector<std::vector<size_t>> nextFloydWarshall; //floyddist
+    std::vector<std::vector<size_t>> matrixFloydWarshall; //floydpath
 public:
     Vertex<T> *findVertex(const T &in) const;
     bool addVertex(const T &in);
@@ -284,13 +284,78 @@ std::vector<T> Graph<T>::getPath(const T &origin, const T &dest) const{
 
 template<class T>
 void Graph<T>::floydWarshallShortestPath() {
+    int v = vertexSet.size();
+    nextFloydWarshall = vector<std::vector<size_t>>(vertexSet.size(), vector<size_t>(vertexSet.size(), INF));
+    matrixFloydWarshall = vector<vector<size_t>>(vertexSet.size(), vector<size_t>(vertexSet.size(), NULL));
+
+    for(int i = 0; i < v ; i++){
+        matrixFloydWarshall[i][i] = v;
+        for(auto & edge : vertexSet.at(i)->adj){
+            for(int j = 0; j < v ; j++){
+                if(edge.dest == vertexSet.at(j)){
+                    nextFloydWarshall[i][j] = edge.weight;
+                    matrixFloydWarshall[i][v] = v;
+                }
+            }
+        }
+    }
+    for(int i = 0; i < v; i++){
+        for(int j = 0; j < v ; j++){
+            for(int k = 0; k < v ; k++){
+                if(nextFloydWarshall[j][k] > nextFloydWarshall[j][i] + nextFloydWarshall[i][k]){
+                    nextFloydWarshall[j][k] = nextFloydWarshall[j][i] + nextFloydWarshall[i][k];
+                    matrixFloydWarshall[j][k] = matrixFloydWarshall[j][i];
+                }
+            }
+        }
+    }
+
 }
 
 
 template<class T>
 std::vector<T> Graph<T>::getfloydWarshallPath(const T &orig, const T &dest) const{
-    std::vector<T> res;
+    vector<T> res;
+    Vertex<T> *orig_vertex = findVertex(orig);
+    if(orig_vertex == NULL) return res ;
+    Vertex<T> *dest_vertex = findVertex(dest);
+    if(dest_vertex == NULL) return res;
+    int v = vertexSet.size();
+    int index_orig;
+    int index_dest;
+    for(int i = 0; i < v ; i++){
+        if(vertexSet.at(i) == orig_vertex) index_orig = i;
+        else if(vertexSet.at(i) == dest_vertex) index_dest = i;
+    }
+    if(matrixFloydWarshall[index_orig][index_dest] == NULL) return res;
+    res.push_back(vertexSet.at(index_orig)->info);
+    while(index_orig != index_dest){
+        index_orig = matrixFloydWarshall[index_orig][index_dest];
+        res.push_back(vertexSet.at(index_orig)->info);
+    }
     return res;
+
+
+    /*std::vector<T> res;
+
+    auto currentVertex = findVertex(orig);
+    auto destinationVertex = findVertex(dest);
+    auto currentVertexIt = std::find(vertexSet.begin(), vertexSet.end(), currentVertex);
+    auto destinationVertexIt = std::find(vertexSet.begin(), vertexSet.end(), destinationVertex);
+
+    if(currentVertexIt == vertexSet.end() || destinationVertexIt == vertexSet.end()) return res;
+
+    size_t currentIndex = std::distance(vertexSet.begin(), currentVertexIt);
+    size_t destinationIndex = std::distance(vertexSet.begin(),destinationVertexIt);
+
+    if(matrixFloydWarshall[currentIndex][destinationIndex] == INT_MAX) return res;
+
+    for(; currentIndex != destinationIndex; currentIndex = nextFloydWarshall[currentIndex][destinationIndex]){
+        res.push_back(vertexSet.at(currentIndex)->info);
+    }
+
+    res.push_back(vertexSet.at(destinationIndex)->info);
+    return res;*/
 }
 
 
